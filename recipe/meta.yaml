@@ -1,5 +1,5 @@
 {% set name = "segmentation-models-pytorch" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/segmentation_models_pytorch-{{ version }}.tar.gz
-  sha256: dd4500710d9150c8b11b4f0c4e8c2020c8310aa257a1d1a7df8a19b9dbb4fd04
+  sha256: 21336d59687991218ffceeefe7d461fd5269ac9342a8234e75e29c7849594111
 
-build: 
+build:
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
-  skip: True  # [not linux]
+  skip: true  # [not linux]
 
 requirements:
   host:
@@ -41,7 +41,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: "Image segmentation models with pre-trained backbones. PyTorch."
+  summary: Image segmentation models with pre-trained backbones. PyTorch.
   dev_url: https://github.com/qubvel/segmentation_models.pytorch
 
 extra:
