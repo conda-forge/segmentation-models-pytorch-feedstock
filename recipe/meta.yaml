@@ -12,7 +12,7 @@ source:
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
-  skip: True  # [not linux or py>37]
+  skip: True  # [not linux or py<37]
 
 requirements:
   host:
@@ -20,9 +20,9 @@ requirements:
     - python
   run:
     - python
-    - pytorch
+    - pytorch >=1.4
     - pretrainedmodels ==0.7.4
-    # - torchvision >=0.3.0
+    - torchvision >=0.3.0
     - efficientnet-pytorch ==0.6.3
     - timm ==0.2.1
 
