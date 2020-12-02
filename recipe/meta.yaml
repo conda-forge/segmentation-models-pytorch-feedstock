@@ -17,12 +17,12 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3
   run:
-    - python
+    - python >=3
     - pytorch
     - pretrainedmodels ==0.7.4
-    - torchvision >=0.3.0
+    # - torchvision >=0.3.0
     - efficientnet-pytorch ==0.6.3
     - timm ==0.2.1
 
