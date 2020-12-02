@@ -12,14 +12,14 @@ source:
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
-  skip: True  # [not linux]
+  skip: True  # [not linux or py36]
 
 requirements:
   host:
     - pip
-    - python >=3
+    - python
   run:
-    - python >=3
+    - python
     - pytorch
     - pretrainedmodels ==0.7.4
     # - torchvision >=0.3.0
