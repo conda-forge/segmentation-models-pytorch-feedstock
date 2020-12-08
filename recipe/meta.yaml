@@ -22,8 +22,9 @@ requirements:
     - python
     - pytorch
     - pretrainedmodels
-    - torchvision >=0.3.0
     - efficientnet-pytorch >=0.5.1
+    - timm
+    - tqdm
 
 test:
   imports:
