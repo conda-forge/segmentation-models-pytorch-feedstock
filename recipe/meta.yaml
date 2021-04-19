@@ -9,22 +9,21 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/segmentation_models_pytorch-{{ version }}.tar.gz
   sha256: 8fb86acb82f8783394c725eea837688f001a2500567ac7eac7a7c2a0e80c814e
 
-build: 
+build:
   number: 0
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  skip: True  # [not linux]
 
 requirements:
   host:
+    - python >=3.7
     - pip
-    - python ==3.7
   run:
-    - python ==3.7
-    - pytorch
-    - pretrainedmodels
+    - python >=3.7
     - efficientnet-pytorch ==0.6.3
+    - pretrainedmodels ==0.7.4
     - timm ==0.3.2
-    - tqdm 
+    - torchvision >=0.3.0
 
 test:
   imports:
@@ -36,6 +35,10 @@ test:
     - segmentation_models_pytorch.pspnet
     - segmentation_models_pytorch.unet
     - segmentation_models_pytorch.utils
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/qubvel/segmentation_models.pytorch
@@ -50,3 +53,4 @@ extra:
     - oblute
     - rluria14
     - ndmaxar
+    - ocefpaf
