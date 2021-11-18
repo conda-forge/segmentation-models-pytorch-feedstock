@@ -1,5 +1,5 @@
 {% set name = "segmentation-models-pytorch" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/segmentation_models_pytorch-{{ version }}.tar.gz
-  sha256: 247266722c23feeef16b0862456c5ce815e5f0a77f95c2cd624a71bf00d955df
+  sha256: 86744552b04c6bedf7e10f7928791894d8d9b399b9ed58ed1a3236d2bf69ead6
 
 build:
   number: 0
