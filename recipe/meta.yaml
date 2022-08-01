@@ -33,10 +33,6 @@ test:
     - segmentation_models_pytorch
     - segmentation_models_pytorch.base
     - segmentation_models_pytorch.encoders
-    - segmentation_models_pytorch.fpn
-    - segmentation_models_pytorch.linknet
-    - segmentation_models_pytorch.pspnet
-    - segmentation_models_pytorch.unet
     - segmentation_models_pytorch.utils
   commands:
     - pip check
