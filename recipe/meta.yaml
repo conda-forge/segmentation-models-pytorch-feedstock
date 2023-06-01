@@ -38,6 +38,7 @@ test:
     - pip check
   requires:
     - pip
+    - python <3.11
 
 about:
   home: https://github.com/qubvel/segmentation_models.pytorch
