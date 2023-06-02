@@ -150,4 +150,5 @@ Feedstock Maintainers
 * [@oblute](https://github.com/oblute/)
 * [@ocefpaf](https://github.com/ocefpaf/)
 * [@rluria14](https://github.com/rluria14/)
+* [@weiji14](https://github.com/weiji14/)
 

@@ -1,5 +1,5 @@
 {% set name = "segmentation-models-pytorch" %}
-{% set version = "0.3.2" %}
+{% set version = "0.3.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/segmentation_models_pytorch-{{ version }}.tar.gz
-  sha256: 8372733e57a10cb8f6b9e18a20577fbb3fb83549b6945664dc774a9b6d3ecd13
+  sha256: b3b21ab4cd26a6b2b9e7a6ed466ace6452eb26ed3c31ae491ea2d7cbb01e384b
 
 build:
   number: 0
@@ -23,7 +23,7 @@ requirements:
     - pillow
     - pretrainedmodels ==0.7.4
     - python >=3.6
-    - timm ==0.6.12
+    - timm ==0.9.2
     - torchvision >=0.5.0
     - tqdm
 
@@ -38,7 +38,6 @@ test:
     - pip check
   requires:
     - pip
-    - python <3.11
 
 about:
   home: https://github.com/qubvel/segmentation_models.pytorch
