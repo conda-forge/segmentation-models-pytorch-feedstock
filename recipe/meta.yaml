@@ -43,6 +43,7 @@ test:
     - segmentation_models_pytorch.base
     - segmentation_models_pytorch.encoders
     - segmentation_models_pytorch.utils
+    - segmentation_models_pytorch.unet
   commands:
     - pip check
   requires:
