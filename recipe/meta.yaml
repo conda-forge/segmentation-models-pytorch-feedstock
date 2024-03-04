@@ -32,7 +32,7 @@ requirements:
     - pretrainedmodels ==0.7.4
     - python >=3.6
     - six
-    - timm
+    - timm >=0.9.2,<0.10a.0a
     - torchvision >=0.5.0
     - tqdm
 
