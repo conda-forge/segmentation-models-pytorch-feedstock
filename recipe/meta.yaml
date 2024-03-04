@@ -8,6 +8,14 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/segmentation_models_pytorch-{{ version }}.tar.gz
   sha256: b3b21ab4cd26a6b2b9e7a6ed466ace6452eb26ed3c31ae491ea2d7cbb01e384b
+  patches:
+    # 2024/03 -- hmaarrfk
+    # Seems like the Upstream project isn't actively maintained limiting the installability
+    # in modern conda-forge environments
+    # We have cautiously loosened the pins
+    # https://github.com/qubvel/segmentation_models.pytorch/issues/849
+    # https://github.com/conda-forge/segmentation-models-pytorch-feedstock/pull/22
+    - let_conda_manage_dependencies.patch
 
 build:
   number: 1
