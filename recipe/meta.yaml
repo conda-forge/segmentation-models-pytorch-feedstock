@@ -21,6 +21,7 @@ requirements:
     - setuptools
   run:
     - efficientnet-pytorch ==0.7.1
+    - huggingface_hub >=0.24.6
     - pillow
     - pretrainedmodels ==0.7.4
     - python >=3.6
