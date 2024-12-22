@@ -6,17 +6,17 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/segmentation_models_pytorch-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/segmentation_models_pytorch-{{ version }}.tar.gz
   sha256: f4aee7f6add479bd3c3953e855b7055fc657dc6800bf7fc8ab733fd7f8acb163
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
@@ -24,7 +24,7 @@ requirements:
     - huggingface_hub >=0.24.6
     - pillow
     - pretrainedmodels ==0.7.4
-    - python >=3.6
+    - python >={{ python_min }}
     - six
     - timm ==0.9.7
     - torchvision >=0.5.0
@@ -41,6 +41,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/qubvel/segmentation_models.pytorch
