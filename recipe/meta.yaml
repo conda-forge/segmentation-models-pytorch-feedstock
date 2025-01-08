@@ -1,5 +1,5 @@
 {% set name = "segmentation-models-pytorch" %}
-{% set version = "0.3.4" %}
+{% set version = "0.4.0" %}
 {% set python_min = "3.9" %}
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/segmentation_models_pytorch-{{ version }}.tar.gz
-  sha256: f4aee7f6add479bd3c3953e855b7055fc657dc6800bf7fc8ab733fd7f8acb163
+  sha256: 8833e63f0846090667be6fce05a2bbebbd1537776d3dea72916aa3db9e22e55b
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
