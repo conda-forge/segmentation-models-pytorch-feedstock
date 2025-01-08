@@ -47,12 +47,13 @@ test:
     - python {{ python_min }}
 
 about:
-  home: https://github.com/qubvel/segmentation_models.pytorch
+  home: https://github.com/qubvel-org/segmentation_models.pytorch
   license: MIT
   license_family: MIT
   license_file: LICENSE
   summary: Image segmentation models with pre-trained backbones. PyTorch.
-  dev_url: https://github.com/qubvel/segmentation_models.pytorch
+  doc_url: https://smp.readthedocs.io
+  dev_url: https://github.com/qubvel-org/segmentation_models.pytorch
 
 extra:
   recipe-maintainers:
