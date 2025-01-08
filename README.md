@@ -3,13 +3,15 @@ About segmentation-models-pytorch-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/segmentation-models-pytorch-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/qubvel/segmentation_models.pytorch
+Home: https://github.com/qubvel-org/segmentation_models.pytorch
 
 Package license: MIT
 
 Summary: Image segmentation models with pre-trained backbones. PyTorch.
 
-Development: https://github.com/qubvel/segmentation_models.pytorch
+Development: https://github.com/qubvel-org/segmentation_models.pytorch
+
+Documentation: https://smp.readthedocs.io
 
 Current build status
 ====================
