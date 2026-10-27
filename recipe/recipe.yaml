@@ -1,0 +1,61 @@
+schema_version: 1
+
+context:
+  version: "0.6.0"
+
+package:
+  name: segmentation-models-pytorch
+  version: ${{ version }}
+
+source:
+  url: https://files.pythonhosted.org/packages/source/s/segmentation-models-pytorch/segmentation_models_pytorch-${{ version }}.tar.gz
+  sha256: 5f90a7a43fac608f85a9dce66f65297d887605da9c2caafb44aa875c30180424
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - setuptools >=77
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - huggingface_hub >=0.24
+    - numpy >=1.21.2
+    - pillow >=8.4
+    - safetensors >=0.3.1
+    - timm >=0.9
+    - pytorch >=1.11
+    - torchvision >=0.12
+    - tqdm >=4.42.1
+    # - efficientnet-pytorch >=0.6.1
+    # - pretrainedmodels >=0.7.1
+    # - six >=1.5
+    # - timm >=0.9
+
+tests:
+  - python:
+      imports:
+        - segmentation_models_pytorch
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+
+about:
+  summary: Image segmentation models with pre-trained backbones. PyTorch.
+  license: MIT
+  license_file: LICENSE
+  homepage: https://github.com/qubvel-org/segmentation_models.pytorch
+
+extra:
+  recipe-maintainers:
+    - weiji14
+    - mxr-conda
+    - oblute
+    - rluria14
+    - ndmaxar
+    - ocefpaf
