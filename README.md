@@ -9,10 +9,6 @@ Package license: MIT
 
 Summary: Image segmentation models with pre-trained backbones. PyTorch.
 
-Development: https://github.com/qubvel-org/segmentation_models.pytorch
-
-Documentation: https://smp.readthedocs.io
-
 Current build status
 ====================
 
